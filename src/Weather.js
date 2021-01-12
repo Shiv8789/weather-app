@@ -11,13 +11,19 @@ function Weather() {
     
     
         
-          const fetchApi= async()=>{ const res= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=2c2f90f87c3221b80e93d1b7e98f5f5f`);
-          const data=await res.json();
-          setCity(data.main);
-          setName(data.name);
-          setWeather(data.weather);
-          setSys(data.sys);
-
+          const fetchApi= async()=>{ 
+            try{
+                const res= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=2c2f90f87c3221b80e93d1b7e98f5f5f`);
+                const data=await res.json();
+                setCity(data.main);
+                setName(data.name);
+                setWeather(data.weather);
+                setSys(data.sys);
+                console.log(weather[0]);
+            }catch(err){
+                console.log(err);
+            } 
+           
 
     }
 
@@ -63,6 +69,9 @@ function Weather() {
                          <h2 className="icon"><i className=" f fas fa-street-view"></i>{city.temp}°C
                           {(city.temp>10)?<i className=" sun fas fa-cloud-sun	"></i>:<i className="sun  fas fa-cloud-sun-rain	"></i>}</h2>
                          
+                         <div className="weather">
+                             <h1>{weather[0].description}</h1>
+                         </div>
                          
                         <div className="tmp">
                             

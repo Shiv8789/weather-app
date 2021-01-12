@@ -64,6 +64,17 @@
     transform: translateY(2px);
   }
 }
+
+.weather {
+  text-align: center;
+  color: white;
+  font-size: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
 #content .temp {
   margin-left: 290px;
   font-size: 60px;
