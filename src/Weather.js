@@ -4,44 +4,22 @@ import './Weather.css'
 function Weather() {
     const [city,setCity]=useState({});
     const [search,setSearch]=useState("pune");
-    const [weather,setWeather]=useState({});
-    const [sys ,setSys]=useState({});
-    const [name ,setName]=useState();
+    const [weather,setWeather]=useState([]);
     
     
     
         
-          const fetchApi= async()=>{ 
-            try{
-                const res= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=2c2f90f87c3221b80e93d1b7e98f5f5f`);
-                const data=await res.json();
-                setCity(data.main);
-                setName(data.name);
-                setWeather(data.weather);
-                setSys(data.sys);
-                console.log(weather[0]);
-            }catch(err){
-                console.log(err);
-            } 
-           
-
+    const fetchApi = async () => {
+        try {
+            const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=2c2f90f87c3221b80e93d1b7e98f5f5f`);
+            const data = await res.json();
+            setCity(data.main);
+            setWeather(data.weather);
+            console.log(city);
+        } catch (err) {
+            console.log(err);
+        }
     }
-
-      
-            
-        
-    // let tp= sys.sunrise;
-    // let date= new Date(tp);
-    // let h=date.getHours();
-    // let m= date.getMinutes();
-    // let t=h+":"+m;
-    // let tp2= sys.sunset;
-    // let date2= new Date(tp2);
-    // let h2=date2.getHours();
-    // let m2= date2.getMinutes();
-    // let t2=h2+":"+m2;
-    
-
 
     
     return (
@@ -49,7 +27,8 @@ function Weather() {
             <div id="main">
                 <div id="search">
 
-                    <input type="search"
+                    <input
+                    type="search"
                     onChange={(e)=>{
                         e.preventDefault();
                         setSearch(e.target.value);
@@ -58,10 +37,16 @@ function Weather() {
                     }}
                     
                      />
-                     <button className="btn" onClick={ fetchApi}>Search</button>
+                    <button className="btn" onClick={fetchApi}>Search</button>
+                    
+
                      
                     
                 </div>
+
+
+                    
+
                 { 
                     city?(
                     <div>
@@ -69,9 +54,9 @@ function Weather() {
                          <h2 className="icon"><i className=" f fas fa-street-view"></i>{city.temp}°C
                           {(city.temp>10)?<i className=" sun fas fa-cloud-sun	"></i>:<i className="sun  fas fa-cloud-sun-rain	"></i>}</h2>
                          
-                         <div className="weather">
+                         {/* <div className="weather">
                              <h1>{weather[0].description}</h1>
-                         </div>
+                         </div> */}
                          
                         <div className="tmp">
                             
@@ -97,6 +82,7 @@ function Weather() {
                     :(<h2 className="m-5 d-1 not" style={{color:'white'}}>404, NOT FOUND</h2>)
 
                 }
+                
                
 
                

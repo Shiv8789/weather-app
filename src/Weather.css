@@ -1,158 +1,160 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 #main {
-  max-width: 600px;
-  min-height: 500px;
-  /* background: linear-gradient(to bottom right, #33ccff 0%, #ff99ff 100%); */
-  background: linear-gradient(to top left, #0066ff 0%, #ccffff 100%);
-  margin: 20px auto;
-  border-radius: 20px;
-  border: 10px solid rgb(14, 36, 62);
-  background-image: url(https://images.unsplash.com/photo-1562505299-a92c9a1c4f37?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Ymx1ZSUyMHNreSUyMGJhY2tncm91bmR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+	max-width: 600px;
+	min-height: 540px;
+	/* background: linear-gradient(to bottom right, #33ccff 0%, #ff99ff 100%); */
+	/* background: linear-gradient(to top left, #0066ff 0%, #ccffff 100%); */
+	margin: 20px auto;
+	border-radius: 20px;
+	border: 10px solid rgb(14, 36, 62);
+	background-image: url(https://images.unsplash.com/photo-1562505299-a92c9a1c4f37?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Ymx1ZSUyMHNreSUyMGJhY2tncm91bmR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #search input {
-  border-radius: 25px;
-  margin: 25px 55px;
-  padding: 5px;
-  background: linear-gradient(to bottom right, #ffffff 0%, #ff00ff 100%);
-  opacity: 0.9;
-  font-size: 20px;
-  font-family: "JetBrains Mono", monospace;
+	border-radius: 25px;
+	margin: 25px 55px;
+	padding: 5px;
+	background: linear-gradient(to bottom right, #ffffff 0%, #ff00ff 100%);
+	opacity: 0.9;
+	font-size: 20px;
+	font-family: "JetBrains Mono", monospace;
 }
 
 #search .btn {
-  margin-left: 0px;
-  background-color: #ff0066;
-  font-weight: bold;
+	margin-left: 0px;
+	background-color: #ff0066;
+	font-weight: bold;
 }
 
 #content .icon {
-  margin-left: 70px;
-  padding: 30px;
-  font-size: 60px;
-  font-weight: bold;
-  color: white;
+	margin-left: 70px;
+	padding: 30px;
+	font-size: 60px;
+	font-weight: bold;
+	color: white;
 }
 #content .icon .f {
-  margin-right: 50px;
-  font-size: 60px;
-  animation: move infinite 1.3s linear;
+	margin-right: 50px;
+	font-size: 60px;
+	animation: move infinite 1.3s linear;
 }
 #content .sun {
-  margin-left: 30px;
+	margin-left: 30px;
 }
 @keyframes move {
-  0% {
-    transform: translateX(0px);
-  }
-  30% {
-    transform: translateX(15px);
-    transform: translateY(8px);
-  }
-  60% {
-    transform: translateX(-45px);
-    transform: translateY(35px);
-  }
-  90% {
-    transform: translateX(-105px);
-    transform: translateY(2px);
-  }
+	0% {
+		transform: translateX(0px);
+	}
+	30% {
+		transform: translateX(15px);
+		transform: translateY(8px);
+	}
+	60% {
+		transform: translateX(-45px);
+		transform: translateY(35px);
+	}
+	90% {
+		transform: translateX(-105px);
+		transform: translateY(2px);
+	}
 }
 
 .weather {
-  text-align: center;
-  color: white;
-  font-size: 90px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 18px;
+	text-align: center;
+	color: white;
+	font-size: 90px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 18px;
 }
 
 #content .temp {
-  margin-left: 290px;
-  font-size: 60px;
-  color: white;
+	margin-left: 290px;
+	font-size: 60px;
+	color: white;
 }
 #content .tmp ul {
-  display: flex;
-  justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
 #content .tmp li {
-  list-style: none;
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
+	list-style: none;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
 }
 
 #content .prs {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: white;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: white;
 }
 #content .prs li {
-  list-style: none;
-  font-size: 38px;
-  font-weight: bold;
+	list-style: none;
+	font-size: 38px;
+	font-weight: bold;
 }
 .not {
-  animation: watch infinite 4s linear;
+	animation: watch infinite 4s linear;
 }
 @keyframes watch {
-  from {
-    font-size: 40px;
-  }
-  to {
-    font-size: 50px;
-    box-shadow: 10px 10px 20px red;
-  }
+	from {
+		font-size: 40px;
+	}
+	to {
+		font-size: 50px;
+		box-shadow: 10px 10px 20px red;
+	}
 }
 
 .content h2 {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
-  body {
-    background: none;
-  }
-  #main {
-    margin: 0;
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    max-height: 630px;
-    overflow-y: hidden;
-  }
-  #search input {
-    width: 250px;
-    margin-right: 10px;
-  }
-  #search .btn {
-    margin-left: 130px;
-  }
-  #content .tmp ul {
-    display: block;
-    margin-left: 40px;
-  }
-  #content .tmp li {
-    font-size: 30px;
-  }
-  #content .prs li {
-    font-size: 30px;
-  }
-  #content .icon .f {
-    opacity: 0;
-  }
-  #content .sun {
-    opacity: 0;
-    visibility: hidden;
-  }
+@media (max-width: 768px) {
+	body {
+		background: none;
+	}
+	#main {
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		height: 100vh;
+		overflow-y: hidden;
+	}
+	#search input {
+		width: 250px;
+		margin-right: 10px;
+	}
+	#search .btn {
+		margin-left: 130px;
+	}
+	#content .tmp ul {
+		display: block;
+		margin-left: 40px;
+	}
+	#content .tmp li {
+		font-size: 30px;
+	}
+	#content .prs li {
+		font-size: 30px;
+	}
+	#content .icon .f {
+		opacity: 0;
+	}
+	#content .sun {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
